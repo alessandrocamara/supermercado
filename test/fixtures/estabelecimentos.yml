@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  nome: MyString
+  end_logradouro: MyString
+  end_numero: MyString
+  end_complemento: MyString
+  bairro_id: 1
+  cidade_id: 1
+  cep: MyString
+
+two:
+  id: 1
+  nome: MyString
+  end_logradouro: MyString
+  end_numero: MyString
+  end_complemento: MyString
+  bairro_id: 1
+  cidade_id: 1
+  cep: MyString

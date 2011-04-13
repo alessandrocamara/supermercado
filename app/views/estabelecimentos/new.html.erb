@@ -1,0 +1,43 @@
+<h1>New estabelecimento</h1>
+
+<% form_for(@estabelecimento) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </p>
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :end_logradouro %><br />
+    <%= f.text_field :end_logradouro %>
+  </p>
+  <p>
+    <%= f.label :end_numero %><br />
+    <%= f.text_field :end_numero %>
+  </p>
+  <p>
+    <%= f.label :end_complemento %><br />
+    <%= f.text_field :end_complemento %>
+  </p>
+  <p>
+    <%= f.label :bairro %><br />
+    <%= f.select :bairro_id, Bairro.find(:all).collect {|bairro| [bairro.nome,bairro.id]}, {:prompt => 'Selecione o bairro'} %>
+  </p>	
+  <p>
+    <%= f.label :cidade %><br />
+    <%= f.select :cidade_id, Cidade.find(:all).collect {|cidade| [cidade.nome,cidade.id]}, {:prompt => 'Selecione a cidade'} %>
+  </p>	
+  <p>
+    <%= f.label :cep %><br />
+    <%= f.text_field :cep %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', estabelecimentos_path %>

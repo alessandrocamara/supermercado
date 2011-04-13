@@ -1,0 +1,23 @@
+<h1>New produto</h1>
+
+<% form_for(@produto) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :categoria %><br />
+    <%= f.select :categoria_id, Categoria.find(:all).collect {|categoria| [categoria.nome,categoria.id]} %>
+  </p>	
+  <p>
+    <%= f.label :descricao %><br />
+    <%= f.text_area :descricao %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', produtos_path %>

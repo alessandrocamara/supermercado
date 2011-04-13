@@ -1,0 +1,23 @@
+<h1>New bairro</h1>
+
+<% form_for(@bairro) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </p>
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :cidade %><br />
+    <%= f.select :cidade_id, Cidade.find(:all).collect {|cidade| [cidade.nome,cidade.id]}, {:prompt => 'Selecione a cidade'} %>
+  </p>	
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', bairros_path %>

@@ -1,0 +1,24 @@
+<h1>Editing bairro</h1>
+
+<% form_for(@bairro) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </p>
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :cidade %><br />
+    <%= f.select :cidade_id, Cidade.find(:all).collect {|cidade| [cidade.nome,cidade.id]} %>
+  </p>	
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @bairro %> |
+<%= link_to 'Back', bairros_path %>

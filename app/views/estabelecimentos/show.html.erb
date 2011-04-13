@@ -1,0 +1,43 @@
+<p>
+  <b>Id:</b>
+  <%=h @estabelecimento.id %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%=h @estabelecimento.nome %>
+</p>
+
+<p>
+  <b>End logradouro:</b>
+  <%=h @estabelecimento.end_logradouro %>
+</p>
+
+<p>
+  <b>End numero:</b>
+  <%=h @estabelecimento.end_numero %>
+</p>
+
+<p>
+  <b>End complemento:</b>
+  <%=h @estabelecimento.end_complemento %>
+</p>
+
+<p>
+  <b>Bairro:</b>
+  <%=h @estabelecimento.bairro_id %>
+</p>
+
+<p>
+  <b>Cidade:</b>
+  <%=h @estabelecimento.cidade_id %>
+</p>
+
+<p>
+  <b>Cep:</b>
+  <%=h @estabelecimento.cep %>
+</p>
+
+
+<%= link_to 'Edit', edit_estabelecimento_path(@estabelecimento) %> |
+<%= link_to 'Back', estabelecimentos_path %>
