@@ -1,0 +1,32 @@
+<h1>Editing usuario</h1>
+
+<% form_for(@usuario) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :senha %><br />
+    <%= f.text_field :senha %>
+  </p>
+  <p>
+    <%= f.label :bairro %><br />
+    <%= f.select :bairro_id, Bairro.find(:all).collect {|bairro| [bairro.nome,bairro.id]}, {:prompt => 'Selecione o bairro'} %>
+  </p>	
+  <p>
+    <%= f.label :cidade %><br />
+    <%= f.select :cidade_id, Cidade.find(:all).collect {|cidade| [cidade.nome,cidade.id]}, {:prompt => 'Selecione a cidade'} %>
+  </p>	
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @usuario %> |
+<%= link_to 'Back', usuarios_path %>

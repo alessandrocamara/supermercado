@@ -2393,3 +2393,348 @@ Rendering estabelecimentos/edit
   [4;35;1mBairro Load (3.9ms)[0m   [0mSELECT * FROM "bairros" [0m
   [4;36;1mCidade Load (3.9ms)[0m   [0;1mSELECT * FROM "cidades" [0m
 Completed in 253ms (View: 191, DB: 18) | 200 OK [http://localhost/estabelecimentos/1/edit]
+  [4;36;1mSQL (18.0ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (75.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateProdutos (20110315150349)
+Migrating to CreateCategorias (20110316122604)
+Migrating to CreateCidades (20110406143550)
+Migrating to CreateBairros (20110406144007)
+Migrating to CreateEstabelecimentos (20110406145236)
+Migrating to CreateUsuarios (20110413203740)
+  [4;35;1mSQL (1.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1903.3ms)[0m   [0;1mCREATE TABLE "usuarios" ("id" serial primary key, "nome" character varying(255), "email" character varying(255), "senha" character varying(255), "bairro" integer, "cidade" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (4.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110413203740')[0m
+  [4;36;1mSQL (23.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (4.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#index (for 127.0.0.1 at 2011-04-13 17:57:59) [GET]
+  [4;36;1mUsuario Load (13.4ms)[0m   [0;1mSELECT * FROM "usuarios" [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/index
+Completed in 13599ms (View: 13558, DB: 19) | 200 OK [http://localhost/usuarios]
+  [4;35;1mSQL (2.1ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#new (for 127.0.0.1 at 2011-04-13 17:58:29) [GET]
+Rendering template within layouts/usuarios
+Rendering usuarios/new
+Completed in 123ms (View: 74, DB: 8) | 200 OK [http://localhost/usuarios/new]
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#index (for 127.0.0.1 at 2011-04-13 18:03:09) [GET]
+  [4;35;1mUsuario Load (8.0ms)[0m   [0mSELECT * FROM "usuarios" [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/index
+Completed in 103ms (View: 13, DB: 15) | 200 OK [http://localhost/usuarios]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#new (for 127.0.0.1 at 2011-04-13 18:03:15) [GET]
+Rendering template within layouts/usuarios
+Rendering usuarios/new
+  [4;36;1mBairro Load (8.0ms)[0m   [0;1mSELECT * FROM "bairros" [0m
+  [4;35;1mCidade Load (8.0ms)[0m   [0mSELECT * FROM "cidades" [0m
+Completed in 544ms (View: 328, DB: 25) | 200 OK [http://localhost/usuarios/new]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#create (for 127.0.0.1 at 2011-04-13 18:03:35) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hgZmTD4sDn+YEZHkWV0slzJE5DzavJKAiS6ssSzJTGA=", "usuario"=>{"cidade_id"=>"1", "bairro_id"=>"1", "nome"=>"alessandro", "senha"=>"123456", "email"=>"alessandrocamara@gmail.com"}}
+  [4;36;1mSQL (2.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCidade Load (7.0ms)[0m   [0mSELECT * FROM "cidades" WHERE ("cidades"."id" = 1) [0m
+  [4;36;1mBairro Load (5.0ms)[0m   [0;1mSELECT * FROM "bairros" WHERE ("bairros"."id" = 1) [0m
+  [4;35;1mUsuario Load (5.0ms)[0m   [0mSELECT "usuarios".id FROM "usuarios" WHERE ("usuarios"."nome" = 'alessandro') LIMIT 1[0m
+  [4;36;1mUsuario Load (2.0ms)[0m   [0;1mSELECT "usuarios".id FROM "usuarios" WHERE ("usuarios"."email" = 'alessandrocamara@gmail.com') LIMIT 1[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mINSERT INTO "usuarios" ("created_at", "cidade_id", "nome", "bairro_id", "updated_at", "email", "senha") VALUES('2011-04-13 21:03:36.105676', 1, 'alessandro', 1, '2011-04-13 21:03:36.105676', 'alessandrocamara@gmail.com', '123456') RETURNING "id"[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/usuarios/1
+Completed in 195ms (DB: 37) | 302 Found [http://localhost/usuarios]
+  [4;35;1mSQL (3.0ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#show (for 127.0.0.1 at 2011-04-13 18:03:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUsuario Load (6.0ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 1) [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/show
+  [4;36;1mBairro Load (5.0ms)[0m   [0;1mSELECT * FROM "bairros" WHERE ("bairros"."id" = 1) [0m
+  [4;35;1mCidade Load (6.0ms)[0m   [0mSELECT * FROM "cidades" WHERE ("cidades"."id" = 1) [0m
+Completed in 157ms (View: 95, DB: 27) | 200 OK [http://localhost/usuarios/1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#index (for 127.0.0.1 at 2011-04-13 18:03:42) [GET]
+  [4;36;1mUsuario Load (8.0ms)[0m   [0;1mSELECT * FROM "usuarios" [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/index
+  [4;35;1mBairro Load (6.0ms)[0m   [0mSELECT * FROM "bairros" WHERE ("bairros"."id" = 1) [0m
+  [4;36;1mCidade Load (5.0ms)[0m   [0;1mSELECT * FROM "cidades" WHERE ("cidades"."id" = 1) [0m
+Completed in 148ms (View: 101, DB: 23) | 200 OK [http://localhost/usuarios]
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#new (for 127.0.0.1 at 2011-04-13 18:03:45) [GET]
+Rendering template within layouts/usuarios
+Rendering usuarios/new
+  [4;35;1mBairro Load (7.0ms)[0m   [0mSELECT * FROM "bairros" [0m
+  [4;36;1mCidade Load (6.0ms)[0m   [0;1mSELECT * FROM "cidades" [0m
+Completed in 184ms (View: 130, DB: 20) | 200 OK [http://localhost/usuarios/new]
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#create (for 127.0.0.1 at 2011-04-13 18:04:02) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hgZmTD4sDn+YEZHkWV0slzJE5DzavJKAiS6ssSzJTGA=", "usuario"=>{"cidade_id"=>"", "bairro_id"=>"", "nome"=>"claudia", "senha"=>"333", "email"=>"alessandrocamara@gmail.com"}}
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUsuario Load (5.0ms)[0m   [0;1mSELECT "usuarios".id FROM "usuarios" WHERE ("usuarios"."nome" = 'claudia') LIMIT 1[0m
+  [4;35;1mUsuario Load (2.0ms)[0m   [0mSELECT "usuarios".id FROM "usuarios" WHERE ("usuarios"."email" = 'alessandrocamara@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/usuarios
+Rendering usuarios/new
+  [4;35;1mBairro Load (5.0ms)[0m   [0mSELECT * FROM "bairros" [0m
+  [4;36;1mCidade Load (5.0ms)[0m   [0;1mSELECT * FROM "cidades" [0m
+Completed in 237ms (View: 147, DB: 25) | 200 OK [http://localhost/usuarios]
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#create (for 127.0.0.1 at 2011-04-13 18:04:11) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hgZmTD4sDn+YEZHkWV0slzJE5DzavJKAiS6ssSzJTGA=", "usuario"=>{"cidade_id"=>"1", "bairro_id"=>"1", "nome"=>"claudia", "senha"=>"333", "email"=>"alessandrocamara@gmail.com"}}
+  [4;35;1mSQL (1.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mCidade Load (5.0ms)[0m   [0;1mSELECT * FROM "cidades" WHERE ("cidades"."id" = 1) [0m
+  [4;35;1mBairro Load (5.0ms)[0m   [0mSELECT * FROM "bairros" WHERE ("bairros"."id" = 1) [0m
+  [4;36;1mUsuario Load (6.0ms)[0m   [0;1mSELECT "usuarios".id FROM "usuarios" WHERE ("usuarios"."nome" = 'claudia') LIMIT 1[0m
+  [4;35;1mUsuario Load (2.0ms)[0m   [0mSELECT "usuarios".id FROM "usuarios" WHERE ("usuarios"."email" = 'alessandrocamara@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/usuarios
+Rendering usuarios/new
+  [4;35;1mBairro Load (3.0ms)[0m   [0mSELECT * FROM "bairros" [0m
+  [4;36;1mCidade Load (3.0ms)[0m   [0;1mSELECT * FROM "cidades" [0m
+Completed in 221ms (View: 64, DB: 32) | 200 OK [http://localhost/usuarios]
+  [4;35;1mSQL (3.0ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#index (for 127.0.0.1 at 2011-04-13 18:04:15) [GET]
+  [4;35;1mUsuario Load (7.0ms)[0m   [0mSELECT * FROM "usuarios" [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/index
+  [4;36;1mBairro Load (5.0ms)[0m   [0;1mSELECT * FROM "bairros" WHERE ("bairros"."id" = 1) [0m
+  [4;35;1mCidade Load (7.0ms)[0m   [0mSELECT * FROM "cidades" WHERE ("cidades"."id" = 1) [0m
+Completed in 290ms (View: 241, DB: 28) | 200 OK [http://localhost/usuarios]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#new (for 127.0.0.1 at 2011-04-13 18:11:12) [GET]
+
+NameError (undefined local variable or method `senha' for #<Class:0x678cb88>):
+  app/models/usuario.rb:9
+  app/controllers/usuarios_controller.rb:27:in `new'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (110.2ms)
+Rendered rescues/_request_and_response (3.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#new (for 127.0.0.1 at 2011-04-13 18:11:34) [GET]
+Rendering template within layouts/usuarios
+Rendering usuarios/new
+  [4;36;1mBairro Load (4.9ms)[0m   [0;1mSELECT * FROM "bairros" [0m
+  [4;35;1mCidade Load (5.9ms)[0m   [0mSELECT * FROM "cidades" [0m
+Completed in 178ms (View: 127, DB: 18) | 200 OK [http://localhost/usuarios/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#new (for 127.0.0.1 at 2011-04-13 18:13:43) [GET]
+Rendering template within layouts/usuarios
+Rendering usuarios/new
+  [4;36;1mBairro Load (5.9ms)[0m   [0;1mSELECT * FROM "bairros" [0m
+  [4;35;1mCidade Load (5.9ms)[0m   [0mSELECT * FROM "cidades" [0m
+Completed in 334ms (View: 281, DB: 16) | 200 OK [http://localhost/usuarios/new]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#create (for 127.0.0.1 at 2011-04-13 18:14:03) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hgZmTD4sDn+YEZHkWV0slzJE5DzavJKAiS6ssSzJTGA=", "usuario"=>{"cidade_id"=>"1", "bairro_id"=>"1", "nome"=>"maria", "confirmacao_senha"=>"123456789", "senha"=>"123456", "email"=>"marial@gmail.com"}}
+  [4;36;1mSQL (2.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCidade Load (6.9ms)[0m   [0mSELECT * FROM "cidades" WHERE ("cidades"."id" = 1) [0m
+  [4;36;1mBairro Load (4.9ms)[0m   [0;1mSELECT * FROM "bairros" WHERE ("bairros"."id" = 1) [0m
+  [4;35;1mUsuario Load (5.9ms)[0m   [0mSELECT "usuarios".id FROM "usuarios" WHERE ("usuarios"."nome" = 'maria') LIMIT 1[0m
+  [4;36;1mUsuario Load (2.0ms)[0m   [0;1mSELECT "usuarios".id FROM "usuarios" WHERE ("usuarios"."email" = 'marial@gmail.com') LIMIT 1[0m
+  [4;35;1mSQL (3.9ms)[0m   [0mINSERT INTO "usuarios" ("created_at", "cidade_id", "nome", "bairro_id", "updated_at", "email", "senha") VALUES('2011-04-13 21:14:03.605601', 1, 'maria', 1, '2011-04-13 21:14:03.605601', 'marial@gmail.com', '123456') RETURNING "id"[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/usuarios/2
+Completed in 194ms (DB: 36) | 302 Found [http://localhost/usuarios]
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#show (for 127.0.0.1 at 2011-04-13 18:14:05) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUsuario Load (6.9ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/show
+  [4;36;1mBairro Load (4.9ms)[0m   [0;1mSELECT * FROM "bairros" WHERE ("bairros"."id" = 1) [0m
+  [4;35;1mCidade Load (4.9ms)[0m   [0mSELECT * FROM "cidades" WHERE ("cidades"."id" = 1) [0m
+Completed in 149ms (View: 76, DB: 22) | 200 OK [http://localhost/usuarios/2]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#show (for 127.0.0.1 at 2011-04-13 18:18:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUsuario Load (6.9ms)[0m   [0;1mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 2) [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/show
+  [4;35;1mBairro Load (6.9ms)[0m   [0mSELECT * FROM "bairros" WHERE ("bairros"."id" = 1) [0m
+  [4;36;1mCidade Load (7.8ms)[0m   [0;1mSELECT * FROM "cidades" WHERE ("cidades"."id" = 1) [0m
+Completed in 179ms (View: 97, DB: 28) | 200 OK [http://localhost/usuarios/2]
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#index (for 127.0.0.1 at 2011-04-13 18:18:56) [GET]
+  [4;35;1mUsuario Load (8.8ms)[0m   [0mSELECT * FROM "usuarios" [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/index
+  [4;36;1mBairro Load (5.9ms)[0m   [0;1mSELECT * FROM "bairros" WHERE ("bairros"."id" = 1) [0m
+  [4;35;1mCidade Load (4.9ms)[0m   [0mSELECT * FROM "cidades" WHERE ("cidades"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bairros" WHERE ("bairros"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cidades" WHERE ("cidades"."id" = 1) [0m
+Completed in 296ms (View: 249, DB: 26) | 200 OK [http://localhost/usuarios]
+  [4;36;1mSQL (2.9ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#new (for 127.0.0.1 at 2011-04-13 18:19:00) [GET]
+Rendering template within layouts/usuarios
+Rendering usuarios/new
+  [4;36;1mBairro Load (5.9ms)[0m   [0;1mSELECT * FROM "bairros" [0m
+  [4;35;1mCidade Load (4.9ms)[0m   [0mSELECT * FROM "cidades" [0m
+Completed in 202ms (View: 149, DB: 20) | 200 OK [http://localhost/usuarios/new]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#create (for 127.0.0.1 at 2011-04-13 18:19:14) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hgZmTD4sDn+YEZHkWV0slzJE5DzavJKAiS6ssSzJTGA=", "usuario"=>{"senha_confirmation"=>"123456789", "cidade_id"=>"", "bairro_id"=>"", "nome"=>"jose", "senha"=>"123456", "email"=>"jose"}}
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUsuario Load (4.9ms)[0m   [0mSELECT "usuarios".id FROM "usuarios" WHERE ("usuarios"."nome" = 'jose') LIMIT 1[0m
+  [4;36;1mUsuario Load (2.0ms)[0m   [0;1mSELECT "usuarios".id FROM "usuarios" WHERE ("usuarios"."email" = 'jose') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/usuarios
+Rendering usuarios/new
+  [4;36;1mBairro Load (4.9ms)[0m   [0;1mSELECT * FROM "bairros" [0m
+  [4;35;1mCidade Load (4.9ms)[0m   [0mSELECT * FROM "cidades" [0m
+Completed in 234ms (View: 150, DB: 26) | 200 OK [http://localhost/usuarios]
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#create (for 127.0.0.1 at 2011-04-13 18:19:26) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hgZmTD4sDn+YEZHkWV0slzJE5DzavJKAiS6ssSzJTGA=", "usuario"=>{"senha_confirmation"=>"123456789", "cidade_id"=>"1", "bairro_id"=>"1", "nome"=>"jose", "senha"=>"123456", "email"=>"jose"}}
+  [4;36;1mSQL (1.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCidade Load (4.9ms)[0m   [0mSELECT * FROM "cidades" WHERE ("cidades"."id" = 1) [0m
+  [4;36;1mBairro Load (4.9ms)[0m   [0;1mSELECT * FROM "bairros" WHERE ("bairros"."id" = 1) [0m
+  [4;35;1mUsuario Load (4.9ms)[0m   [0mSELECT "usuarios".id FROM "usuarios" WHERE ("usuarios"."nome" = 'jose') LIMIT 1[0m
+  [4;36;1mUsuario Load (2.0ms)[0m   [0;1mSELECT "usuarios".id FROM "usuarios" WHERE ("usuarios"."email" = 'jose') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/usuarios
+Rendering usuarios/new
+  [4;36;1mBairro Load (4.9ms)[0m   [0;1mSELECT * FROM "bairros" [0m
+  [4;35;1mCidade Load (2.9ms)[0m   [0mSELECT * FROM "cidades" [0m
+Completed in 224ms (View: 66, DB: 32) | 200 OK [http://localhost/usuarios]
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSET client_encoding TO 'unicode'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#create (for 127.0.0.1 at 2011-04-13 18:19:32) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"hgZmTD4sDn+YEZHkWV0slzJE5DzavJKAiS6ssSzJTGA=", "usuario"=>{"senha_confirmation"=>"123456", "cidade_id"=>"1", "bairro_id"=>"1", "nome"=>"jose", "senha"=>"123456", "email"=>"jose"}}
+  [4;36;1mSQL (2.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCidade Load (5.9ms)[0m   [0mSELECT * FROM "cidades" WHERE ("cidades"."id" = 1) [0m
+  [4;36;1mBairro Load (5.9ms)[0m   [0;1mSELECT * FROM "bairros" WHERE ("bairros"."id" = 1) [0m
+  [4;35;1mUsuario Load (6.9ms)[0m   [0mSELECT "usuarios".id FROM "usuarios" WHERE ("usuarios"."nome" = 'jose') LIMIT 1[0m
+  [4;36;1mUsuario Load (2.9ms)[0m   [0;1mSELECT "usuarios".id FROM "usuarios" WHERE ("usuarios"."email" = 'jose') LIMIT 1[0m
+  [4;35;1mSQL (3.9ms)[0m   [0mINSERT INTO "usuarios" ("created_at", "cidade_id", "nome", "bairro_id", "updated_at", "email", "senha") VALUES('2011-04-13 21:19:32.422397', 1, 'jose', 1, '2011-04-13 21:19:32.422397', 'jose', '123456') RETURNING "id"[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/usuarios/3
+Completed in 396ms (DB: 40) | 302 Found [http://localhost/usuarios]
+  [4;35;1mSQL (2.9ms)[0m   [0mSET client_encoding TO 'unicode'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing UsuariosController#show (for 127.0.0.1 at 2011-04-13 18:19:33) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mUsuario Load (5.9ms)[0m   [0mSELECT * FROM "usuarios" WHERE ("usuarios"."id" = 3) [0m
+Rendering template within layouts/usuarios
+Rendering usuarios/show
+  [4;36;1mBairro Load (5.9ms)[0m   [0;1mSELECT * FROM "bairros" WHERE ("bairros"."id" = 1) [0m
+  [4;35;1mCidade Load (4.9ms)[0m   [0mSELECT * FROM "cidades" WHERE ("cidades"."id" = 1) [0m
+Completed in 139ms (View: 77, DB: 24) | 200 OK [http://localhost/usuarios/3]
